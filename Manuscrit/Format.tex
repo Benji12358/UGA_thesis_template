@@ -1,0 +1,54 @@
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%                      Format thesis                         %%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lhead[\fancyplain{}{\leftmark}]%Pour les pages paires \bfseries
+      {\fancyplain{}{}} %Pour les pages impaires
+\chead[\fancyplain{}{}]%
+      {\fancyplain{}{}}
+\rhead[\fancyplain{}{}]%Pour les pages paires 
+      {\fancyplain{}{\rightmark}}%Pour les pages impaires \bfseries
+\lfoot[\fancyplain{}{}]%
+      {\fancyplain{}{}}
+\cfoot[\fancyplain{}{\thepage}]%\bfseries
+      {\fancyplain{}{\thepage}} %\bfseries
+\rfoot[\fancyplain{}{}]%
+     {\fancyplain{}{\scriptsize}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%              Rename Fig. and Tab. in  caption              %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\figurename}{Figure}  %Changement de Fig. en Figure
+\renewcommand{\tablename}{Table}  %Changement de Tab. en Tableau
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%                          Options                           %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \renewcommand{\LettrineFontHook}{\color[gray]{0.3} \calligra}
+\renewcommand{\arraystretch}{1.5}
+
+\renewcommand{\theequation}{\thechapter.\arabic{equation}}
+
+\numberwithin{equation}{subsection}
+
+\renewcommand\thesection{\arabic{section}}
+
+%% pour numéroter les subsubsubsection
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
+
+%%
+
+\newcommand{\uul}[1]{
+\underline{\underline{#1}}
+}
+\newlength{\chaptertopskip}
+\newlength{\chapterbottomskip}
+\setlength{\chaptertopskip}{10pt}
+\setlength{\chapterbottomskip}{10pt}
+
+\renewcommand\thesection{\thechapter.\arabic{section}}

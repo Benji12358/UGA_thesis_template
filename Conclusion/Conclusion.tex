@@ -1,0 +1,84 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%                           Conclusion Géné                     %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\phantomsection 
+\addcontentsline{toc}{chapter}{Conclusion et perspectives}
+\addtocontents{toc}{\protect\addvspace{10pt}}
+
+\lhead[\fancyplain{}{Conclusion et perspectives}]
+      {\fancyplain{}{}}
+\chead[\fancyplain{}{}]
+      {\fancyplain{}{}}
+\rhead[\fancyplain{}{}] 
+      {\fancyplain{}{Conclusion et perspectives}}
+\lfoot[\fancyplain{}{}]
+      {\fancyplain{}{}}
+\cfoot[\fancyplain{}{\thepage}]
+      {\fancyplain{}{\thepage}}
+\rfoot[\fancyplain{}{}]
+     {\fancyplain{}{\scriptsize}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%                      Start part here                          %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter*{\lettrine[lines=1]{C}{onclusion et perspectives}}
+\label{ch/conclusion}
+
+\null\vfill
+L'objectif de cette thèse était de déclencher une transition de type bypass, rapide et efficace dans la zone d'entrée hydraulique d'un écoulement initialement laminaire dans un canal pour améliorer le processus de transfert dans l'écoulement développé qui suit. Pour atteindre cet objectif, plusieurs étapes ont été nécessaires.\\
+
+%%%%%%%% D'abord bilio
+\vspace{1cm}
+Le chapitre 1 dresse un état de l'art de la transition bypass et les écoulements rugueux. D'une part, la transition bypass se caractérise par des échelles de temps nettement plus courtes que les ondes typiques de Tollmien-Schlichting, ce qui est bénéfique pour la transition dans un canal de longueur finie. Des spots transitionnels se forment lors d’une transition bypass, comme on en retrouve dans certaines étapes de la transition déclenchée par des rugosités en quinconce. La transition bypass dans un écoulement initialement laminaire peut être déclenchée en distribuant les rugosités de manière à casser la symétrie transversale. La forme, la taille et la distribution des rugosités ont une influence sur le déclenchement et la rapidité de la transition.\\
+
+%%%%%%%% Puis code DNS
+\vspace{1cm}
+Le code de Simulations Numériques Directes (SND) utilisé pendant la thèse est détaillé dans le chapitre 2. MULTIFAST est un code de différences finies développé au LEGI et basé sur la résolution des équations de Navier-Stokes incompressibles. Le transport d'un scalaire passif, comme la température, se fait via la résolution d'une équation de transport. Bien que MULTIFAST possède de nombreux modules, des implémentations supplémentaires ont été nécessaires pour répondre à la problématique de cette thèse. La méthode dîte de Fringe a été implémentée pour traiter les conditions non-périodiques dans la direction longitudinale. Elle consiste à corriger toutes déviations des profils de vitesse par rapport à un profil de référence via une force de rappel dans une région placée soit à l'entrée du canal, soit à la sortie. De plus, la méthode des frontières immergées a été implémentée pour les simulations sur parois rugueuses. Elle repose sur un forçage direct pour assurer une vitesse nulle ou une température constante aux parois des rugosités.
+\vfill\null
+
+%%%%%%%% Transition bypass en écoulement de Poiseuille
+\clearpage
+Le transport d'un scalaire passif au sein d'un spot transitionnel dans un écoulement de Poiseuille a été analysé dans le chapitre 3. Ce point n'avait pas été abordé dans la littérature. La transition bypass a été déclenchée grâce à une paire de tourbillons contrarotatifs placée dans un écoulement de Poiseuille. Le spot résultant de la transition a été détecté et suivi en temps, ce qui a permis de déterminer les statistiques au sein de celui-ci.
+
+Structurellement, un spot est composé d'une région d'onde en amont ; et d'un cœur turbulent en aval. Il a une vitesse de convection inférieure à l'écoulement laminaire qui l'entoure. Par conséquent, il y a une accélération locale et un écoulement transverse est engendré en amont. Des points d'inflexion s'établissent dans les profils locaux et instantanés de la vitesse transversale aux extrémités amonts. Ils déstabilisent l'écoulement et sont à l'origine des ondes obliques qui constituent la région d'onde. Ces dernières interagissent entre elles, se rompent et génèrent la turbulence qui constitue le cœur turbulent. 
+
+Le spot est peuplé de tourbillons quasi-longitudinaux (TQLs) qui se rassemblent et s’alignent de manière cohérente sur la périphérie. Ils engendrent des mouvements passifs à grandes échelles. Ils contribuent aux intensités des fluctuations de la vitesse longitudinale et transversale, et dans une moindre mesure du scalaire passif dans la couche externe, mais n'ont pas d'impacts ni sur l'intensité des fluctuations de la vitesse normale à la paroi, ni sur la contrainte de Reynolds. 
+
+Le cœur turbulent se caractérise par une homogénéité longitudinale et transversale et une forte similitude avec un écoulement turbulent canonique au même nombre de Reynolds. En revanche, la région d'onde est responsable d'importantes fluctuations de vitesse et de température. Elle est donc un atout pour le mélange turbulent. Les flux turbulents du transport scalaire sont plus importants, le temps de brassage est divisé par deux, et des estimations basées sur la dissipation de l'énergie cinétique montrent que le mélange est plus rapide et que le rapport surface/volume est plus important dans le spot total comparé à de la turbulence de paroi canonique. Enfin, le nombre de Prandtl turbulent est significativement plus faible que $1$ dans le spot total, ce qui montre que le transfert du scalaire passif par diffusion turbulente domine le transport de la quantité de mouvement par la viscosité turbulente.\\
+
+%%%%%%%% Ecoulement rugueux périodique
+\vspace{3cm}
+Des rugosités rectangulaires de grande taille ($k^{*}=0.27$) ont été placées dans un écoulement en canal initialement laminaire dans le but de déclencher une transition bypass dans le chapitre 4. 
+
+La transition à la turbulence n'est déclenchée que lorsque les rugosités sont décalées en quinconce. Il est nécessaire de casser la symétrie transversale pour induire des fluctuations de la vitesse transversale $w' \ne 0$. Un régime totalement rugueux est alors atteint même dans le cas où le décalage entre les rugosités est faible. 
+
+Des couches de cisaillement transversales de forte intensité s'enroulent sur les crêtes, mais y restent attachées. Des TQLs apparaissent entre les rugosités uniquement lorsqu’ils peuvent se développer spatio-temporellement et se maintenir. Notre analyse concernant les conditions nécessaires de la régénération et du maintien des TQLs entre les rugosités, et qui est basée sur le concept de \foreignquote{french}{minimum channel} donne des estimations en accord avec les SND. 
+
+Les couches de cisaillement attachées sur les crêtes dominent le transport du scalaire passif et augmentent considérablement l'activité turbulente $\left( \theta'^{+}_{RMS} \right)$ dans la couche externe pour les configurations à faibles décalages. Les TQLs entre les rugosités masquent la signature et les effets des couches de cisaillement pour les grands décalages. Les nombres de Nusselt dans les différentes configurations sont considérablement plus grands que $Nu$ correspondant à un régime pleinement turbulent en canal lisse. Ils ne dépendent pas du nombre de $Re_{b}$, puisque le régime est totalement développé rugueux.\\
+
+%%%%%%%% Ecoulement rugueux en entrée
+\vspace{1cm}
+L'effet d'une distribution en quinconce des rugosités placées dans la zone de développement hydraulique d'un canal fait l'objet du chapitre 5. L'écoulement se divise en trois régions : une zone d'entrée laminaire lisse (EL), une zone d'entrée rugueuse (ER) et le canal lisse de contrôle en aval des rugosités (CC). 
+
+Une méthode numérique basée sur une approche de sous-domaines interconnectés (ISA) a été développée pour mener les SND en des temps raisonnables. Les performances ont été mesurées et ont montré que le temps de calcul est divisé par $6$ pour certaines simulations de l'étude. 
+
+Deux répartitions, l'une avec des rugosités de grande hauteur ($k^{*}=0.27$) et l'autre avec $k^{*}=0.135$ ont été analysées, dans trois configurations dans lesquelles les rugosités couvrent entièrement ou partiellement la zone d'entrée. Le nombre de $Re_{b}$ est faible, il est proche de $Re_{bcr}$ et le régime est sous-critique dans les deux répartitions. Un gradient de pression est imposé dans la zone rugueuse, et $Re_{b}$ dépend de la distribution des rugosités. 
+
+La transition bypass est déclenchée dans les situations où $Re_{b}$ est suffisamment grand par rapport à $Re_{bcr}$ et/ou la perturbation imposée est intense. Lorsque ces deux conditions sont établies, les structures actives arrivent à pénétrer dans le canal de contrôle dans lequel la turbulence locale se relaxe et se désintègre suivant la direction longitudinale. En effet, l'écoulement dans le canal lisse de contrôle est également sous-critique. 
+
+La longueur de relaxation est cependant suffisamment grande pour forcer le transfert pariétal vers un régime pseudo-turbulent. Le nombre de Nusselt qui résulte est alors significativement plus grand que $Nu$ d'un écoulement turbulent développé équivalent. L'objectif principal de la recherche ci présente a donc été atteint.
+
+\clearpage
+Les rugosités de grandes tailles placées en quinconce ont fait l'objet de peu d'études. Par conséquent, la géométrie, la hauteur et la distribution de ces dernières ne sont pas optimisées. Il serait intéressant de procéder à une étude géométrique en canal périodique pour souligner les différences entre les formes de rugosités et leurs distributions. De plus, l’étude réalisée avec les rugosités distribuées dans la zone de développement hydraulique semble être la première. Le point important à retenir est que l’écoulement dans le canal de contrôle se manipule grâce à la distribution de rugosités dans le canal laminaire rugueux. Par conséquent, des études paramétriques peuvent être réalisées afin d’atteindre des objectifs précis dans le canal de contrôle. On peut penser notamment à une maximisation du nombre de Nusselt, une intensification du mélange turbulent, ou un compromis entre l’amélioration des transferts pariétaux et le niveau de turbulence.\\
+
+\vspace{1cm}
+Cependant, il faut obligatoirement généraliser la méthode des frontières immergées (IBM) qui n'a été implémentée que pour les rugosités cubique et rectangulaire dans MULTIFAST. Il faut revoir la création des masques de rugosités et repenser l’interpolation des vitesses. Les routines permettant les interpolations bi-linéaire et tri-linéaire ont déjà été implémentées, mais un travail supplémentaire est nécessaire. Un autre point intéressant serait l'optimisation du temps de calcul concernant les IBM. Pendant la thèse, plusieurs \foreignquote{french}{expérimentations numériques} ont été réalisées : couplage de schémas de discrétisation, maillages zonaux, ... Du temps pourrait être consacré à la généralisation de ces méthodes dans MULTIFAST pour voir les gains à en tirer. L'implémentation serait lourde, mais elle en vaut peut-être le coup. Concernant la méthode ISA, du temps pourrait être consacré au découplage total des maillages dans les différents canaux avec la conservation du flux aux interfaces.\\
+
+\vspace{1cm}
+L'étude réalisée au cours de cette thèse pourrait se poursuivre avec une condition de flux constant aux parois. Il a été montré à plusieurs reprises dans la littérature que les différences entre une condition de température constante et de flux constant était marginale dans le processus du transport de scalaire passif pour les écoulements développés, notamment en ce qui concerne le transfert pariétal. Il serait néanmoins intéressant d'étudier le niveau de similitude entre ces deux configurations pour des écoulements en transition.\\
+
+\vspace{1cm}
+Enfin, il faudrait poursuivre l'étude sur les rugosités placées dans un canal périodique pour mieux comprendre le mécanisme de transition bypass. Les décompositions triples pourraient être généralisées à d’autres quantités, en particulier aux corrélations pression-vitesse $\Pi$, ou aux termes de transport du champ scalaire et de l'énergie cinétique turbulente.
